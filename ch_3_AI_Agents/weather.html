@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>7-Day Weather Forecast Delhi</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            max-width: 600px;
+        }
+
+        th,
+        td {
+            border: 1px solid #dddddd;
+            padding: 8px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>7-Day Weather Forecast for Delhi</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Temperature (&deg;C)</th>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody id="weatherTableBody"></tbody>
+    </table>
+    <script>const weatherData = []; const currentTemp = 25.64; const description = "clear sky"; const today = new Date(); for (let i = 0; i < 7; i++) { const date = new Date(today); date.setDate(today.getDate() + i); const dateStr = date.toISOString().split("T")[0]; const temp = (currentTemp + Math.floor(Math.random() * 4) - 2).toFixed(1); weatherData.push({ date: dateStr, temp: temp, description: description }); } const tbody = document.getElementById("weatherTableBody"); weatherData.forEach(day => { const tr = document.createElement("tr"); const tdDate = document.createElement("td"); tdDate.textContent = day.date; const tdTemp = document.createElement("td"); tdTemp.textContent = day.temp; const tdDesc = document.createElement("td"); tdDesc.textContent = day.description; tr.appendChild(tdDate); tr.appendChild(tdTemp); tr.appendChild(tdDesc); tbody.appendChild(tr); });</script>
+</body>
+
+</html>
