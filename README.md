@@ -1,5 +1,7 @@
 # Generative AI Examples and Tutorials
 
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
 This repository contains example code, exercises, and small projects demonstrating core Generative AI concepts, including token encoding, vector embeddings, prompting techniques, agent patterns, and retrieval-augmented generation (RAG).
 
 ## Overview
@@ -66,6 +68,8 @@ Adjust file paths and parameters inside each script as needed — the examples a
 ## Contributing
 
 Contributions are welcome. Please open an issue or a pull request with a clear description. Keep examples small, documented, and reproducible.
+
+Please do not commit secrets or API keys. Use environment variables (for example a local `.env` file) and ensure `.env` is added to `.gitignore`. For security issues, see `SECURITY.md`.
 
 ## License
 
